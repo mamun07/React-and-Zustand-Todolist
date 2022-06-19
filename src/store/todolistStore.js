@@ -8,6 +8,11 @@ const todolistStore = (set) => ({
       todolists: [todolist, ...state.todolists],
     }));
   },
+  editTodolist: (todolistId) => {
+    set((state) => ({
+      todolists: state.todolists.filter((todo) => todo.id !== todolistId),
+    }));
+  },
   removeTodolist: (todolistId) => {
     set((state) => ({
       todolists: state.todolists.filter((todo) => todo.id !== todolistId),

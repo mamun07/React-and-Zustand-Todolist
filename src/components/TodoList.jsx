@@ -6,13 +6,13 @@ import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 const { Text } = Typography;
 
 const TodoList = () => {
-  const { todolists, removeTodolist, toggleTodolistStatus } = useTodolistStore(
-    (state) => ({
+  const { todolists, editTodolist, removeTodolist, toggleTodolistStatus } =
+    useTodolistStore((state) => ({
       todolists: state.todolists,
+      editTodolist: state.editTodolist,
       removeTodolist: state.removeTodolist,
       toggleTodolistStatus: state.toggleTodolistStatus,
-    })
-  );
+    }));
   return (
     <List
       itemLayout="horizontal"
@@ -33,7 +33,7 @@ const TodoList = () => {
               />,
             ]}
           >
-            <div>
+            <div className="single-tasklist">
               <Checkbox
                 checked={todolist.completed}
                 onChange={(e) => {
@@ -42,7 +42,13 @@ const TodoList = () => {
                 value={todolist?.task}
                 style={{ marginRight: '15px' }}
               />
-              <Text>{todolist?.task}</Text>
+              {todolist.completed ? (
+                <Text delete italic disabled>
+                  {todolist?.task}
+                </Text>
+              ) : (
+                <Text>{todolist?.task}</Text>
+              )}
             </div>
           </List.Item>
         </Card>
