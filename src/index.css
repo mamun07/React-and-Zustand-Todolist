@@ -11,11 +11,11 @@ body {
   padding: 50px 0;
 }
 .form-container {
+  margin: 50px 0;
+  text-align: center;
 }
 .contact-main_area {
-  width: 500px;
+  width: 700px;
   margin: 0 auto;
-  background: rgb(247, 247, 247);
-  padding: 30px;
   border-radius: 5px;
 }
