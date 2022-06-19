@@ -10,9 +10,11 @@ function App() {
     <Layout className="main-container">
       <Content>
         <Row>
-          <Col span={12} offset={6}>
-            <TodoForm />
-            <TodoList />
+          <Col span={20} offset={2}>
+            <div className="contact-main_area">
+              <TodoForm />
+              <TodoList />
+            </div>
           </Col>
         </Row>
       </Content>

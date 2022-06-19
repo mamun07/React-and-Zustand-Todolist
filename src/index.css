@@ -8,4 +8,14 @@ body {
 
 .main-container {
   background: none;
+  padding: 50px 0;
+}
+.form-container {
+}
+.contact-main_area {
+  width: 500px;
+  margin: 0 auto;
+  background: rgb(247, 247, 247);
+  padding: 30px;
+  border-radius: 5px;
 }
