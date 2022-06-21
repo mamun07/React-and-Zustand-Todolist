@@ -6,13 +6,13 @@ import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 const { Text } = Typography;
 
 const TodoList = () => {
-  const { todolists, editTodolist, removeTodolist, toggleTodolistStatus } =
-    useTodolistStore((state) => ({
+  const { todolists, removeTodolist, toggleTodolistStatus } = useTodolistStore(
+    (state) => ({
       todolists: state.todolists,
-      editTodolist: state.editTodolist,
       removeTodolist: state.removeTodolist,
       toggleTodolistStatus: state.toggleTodolistStatus,
-    }));
+    })
+  );
   return (
     <List
       itemLayout="horizontal"
